@@ -6,22 +6,49 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <title>Demo</title>
         <link rel="stylesheet" href="http://openlayers.org/dev/theme/default/style.css" type="text/css">
-        <link rel="stylesheet" href="font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.2.custom.css"> -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/ui-lightness/jquery-ui.min.css">
         <style>
+          body {
+            font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+            font-size: 1.1em;
+          }
           .olControlAttribution {
               font-family: "Lucida Grande", Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
               bottom: 5px;
           }
+          .panel {
+            z-index: 10000;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+            width: 240px;
+            color: #1c94c4;
+            background-color: white;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            border-radius: 4px;
+            padding-left: 8px;
+            display: none;
+          }
         </style>
     </head>
     <body>
-        <div style="text-align:center; vertical-align: middle; z-index: 10000; position: absolute; top: 10px; left: 10px; width: 40px; height: 40px; border: 1px solid gray; border-radius: 5px; background-color: white;">
-        <i class="icon-pencil icon-2x" style="position: relative; top: 4px;"></i>
+        <div style="z-index: 10000; position: absolute; top: 10px; left: 10px; width: 250px;">
+          <p><button id="draw" style="width: 250px;">Skapa felrapport</button></p>
         </div>
+        
+        <div class="panel">
+          <p><input id="v1" type="checkbox">&nbsp;Val 1</input><label for="v1"></label></p>
+          <p><input id="v2" type="checkbox">&nbsp;Val 2</input><label for="v2"></label></p>
+          <p><input id="v3" type="checkbox">&nbsp;Val 3</input><label for="v3"></label></p>
+        </div>
+        
         <div id="map" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
 
         <script src="http://openlayers.org/dev/OpenLayers.js"></script>
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
         <script src="mapbox.js"></script>
     </body>
 </html>

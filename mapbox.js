@@ -20,4 +20,16 @@ var map = new OpenLayers.Map({
     controls: [new OpenLayers.Control.Navigation(), new OpenLayers.Control.Attribution()]
 });
 
+$('button').button({
+  icons: { primary: "ui-icon-pencil" }
+}).click(function() {
+  $('.panel').fadeIn();
+});
 
+/*
+$('input[type="checkbox"]').button({
+  icons: { primary: "ui-icon-check" },
+  text: false
+});
+
+*/
