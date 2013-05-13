@@ -1,0 +1,31 @@
+body {
+  font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+  font-size: 1.1em;
+}
+.olControlAttribution {
+    font-family: "Lucida Grande", Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+    bottom: 5px;
+}
+.panel {
+  z-index: 10000;
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  width: 240px;
+  color: #1c94c4;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  border-radius: 4px;
+  padding-left: 8px;
+  display: none;
+}
+
+#draw {
+  display: none;
+  width: 250px;
+}
+
+#login {
+  width: 250px;
+}
