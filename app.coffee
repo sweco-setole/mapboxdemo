@@ -12,18 +12,23 @@ $ ->
   map = new OpenLayers.Map
     div: 'map'
     layers: [osm]
-    center: [1721973.373208, 9047015.384574]
-    zoom: 5
+    center: [1480000, 7520000]
+    zoom: 9
+    units: 'm'
     controls: [new OpenLayers.Control.Navigation, new OpenLayers.Control.Attribution]
-
+    
   markers = new OpenLayers.Layer.Vector 'markers',
     styleMap: new OpenLayers.StyleMap
       default:
         strokeWidth: 0.5
-        pointRadius: 4
+        pointRadius: 5
         fillColor: '#ff0000'
   
   map.addLayer markers
+  
+  drawFeature = new OpenLayers.Control.DrawFeature markers, OpenLayers.Handler.Point
+  map.addControl drawFeature
+  
   
   selectFeature = new OpenLayers.Control.SelectFeature markers
   map.addControl selectFeature
@@ -33,35 +38,39 @@ $ ->
   
   markers.events.register 'featureselected', null, (e) ->
     $('.panel').fadeIn()
-    selectedFeature = e.feature
-    $('#v1').prop 'checked', selectedFeature.attributes.v1
-    $('#v2').prop 'checked', selectedFeature.attributes.v2
-    $('#v3').prop 'checked', selectedFeature.attributes.v3
-    $('#errortitle').text('Felanmälan ' + selectedFeature.fid)
+    f = e.feature
+    $('#v1').prop 'checked', f.attributes.v1
+    $('#v2').prop 'checked', f.attributes.v2
+    $('#v3').prop 'checked', f.attributes.v3
+    $('#errortitle').text "Felanmälan #{f.fid}"
+    selectedFeature = f
 
   $('#draw').button(
     icons: { primary: "ui-icon-pencil" }
-    disabled: true
   ).click ->
-    $('.panel').fadeIn()
-  $('#draw').attr 'disabled', 'disabled'
-  
+    drawFeature.activate()
+    
+    markers.events.register 'featureadded', null, (e) ->
+      $('.panel').fadeIn()
+      drawFeature.deactivate()
+      e.feature.fid = 'ny'
+      selectFeature.select e.feature
+
   $('#login').button()
     .click ->
       $('#login').fadeOut()
       $('#draw').fadeIn()
-      attr =
+      a =
         v1: false
         v2: false
         v3: false
       markers.addFeatures [
-        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1650000, 8500000), attr
-        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1850000, 9500000), attr
-        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1450000, 8000000), attr
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1445067,7475858), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1442443,7441135), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1433729,7571251), a
       ]
-      markers.features[0].fid = 1
-      markers.features[1].fid = 2
-      markers.features[2].fid = 3
+      for f, i in markers.features
+        f.fid = i+1
   
   $('input[type=checkbox]').click (e) ->
     selectedFeature?.attributes[this.id] = $(this).prop 'checked'
