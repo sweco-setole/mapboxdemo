@@ -57,7 +57,7 @@ $ ->
       markers.addFeatures [
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1445067,7475858), a
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1442443,7441135), a
-        new OpenLayers.Feature.Vector (new OpenL©ayers.Geometry.Point 1433729,7571251), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1433729,7571251), a
       ]
       for f in markers.features
         count += 1

@@ -54,7 +54,7 @@
         v2: false,
         v3: false
       };
-      markers.addFeatures([new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(1445067, 7475858), a), new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(1442443, 7441135), a), new OpenLayers.Feature.Vector(new OpenL©ayers.Geometry.Point(1433729, 7571251), a)]);
+      markers.addFeatures([new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(1445067, 7475858), a), new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(1442443, 7441135), a), new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(1433729, 7571251), a)]);
       _ref = markers.features;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         f = _ref[_i];
