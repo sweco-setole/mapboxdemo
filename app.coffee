@@ -29,7 +29,6 @@ $ ->
   drawFeature = new OpenLayers.Control.DrawFeature markers, OpenLayers.Handler.Point
   map.addControl drawFeature
   
-  
   selectFeature = new OpenLayers.Control.SelectFeature markers
   map.addControl selectFeature
   selectFeature.activate()
@@ -45,17 +44,8 @@ $ ->
     $('#errortitle').text "Felanmälan #{f.fid}"
     selectedFeature = f
 
-  $('#draw').button(
-    icons: { primary: "ui-icon-pencil" }
-  ).click ->
-    drawFeature.activate()
-    
-    markers.events.register 'featureadded', null, (e) ->
-      $('.panel').fadeIn()
-      drawFeature.deactivate()
-      e.feature.fid = 'ny'
-      selectFeature.select e.feature
-
+  count = 0
+  
   $('#login').button()
     .click ->
       $('#login').fadeOut()
@@ -67,12 +57,30 @@ $ ->
       markers.addFeatures [
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1445067,7475858), a
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1442443,7441135), a
-        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1433729,7571251), a
+        new OpenLayers.Feature.Vector (new OpenL©ayers.Geometry.Point 1433729,7571251), a
       ]
-      for f, i in markers.features
-        f.fid = i+1
+      for f in markers.features
+        count += 1
+        f.fid = count
+      
+      $('#draw').button(
+        icons: { primary: "ui-icon-pencil" }
+      ).click ->
+        drawFeature.activate()
+      
+      markers.events.register 'featureadded', null, (e) ->
+        $('.panel').fadeIn()
+        drawFeature.deactivate()
+        count += 1
+        e.feature.fid = count
+        e.feature.attributes =
+          v1: false
+          v2: false
+          v3: false
+        selectFeature.select e.feature
   
   $('input[type=checkbox]').click (e) ->
-    selectedFeature?.attributes[this.id] = $(this).prop 'checked'
+    selectedFeature?.attributes[this.id] = $(this).is(':checked')
+    true
 
 
