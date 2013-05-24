@@ -3,7 +3,7 @@
   $(function() {
     var count, drawFeature, map, markers, osm, selectFeature, selectedFeature;
 
-    osm = new OpenLayers.Layer.XYZ('mapbox', ["http://a.tiles.mapbox.com/v3/bjornharrtell.map-em5abk65/${z}/${x}/${y}.png", "http://b.tiles.mapbox.com/v3/bjornharrtell.map-em5abk65/${z}/${x}/${y}.png", "http://c.tiles.mapbox.com/v3/bjornharrtell.map-em5abk65/${z}/${x}/${y}.png", "http://d.tiles.mapbox.com/v3/bjornharrtell.map-em5abk65/${z}/${x}/${y}.png"], {
+    osm = new OpenLayers.Layer.XYZ('mapbox', ["http://a.tiles.mapbox.com/v3/toblen.map-7kkard5p/${z}/${x}/${y}.png", "http://b.tiles.mapbox.com/v3/toblen.map-7kkard5p/${z}/${x}/${y}.png", "http://c.tiles.mapbox.com/v3/toblen.map-7kkard5p/${z}/${x}/${y}.png", "http://d.tiles.mapbox.com/v3/toblen.map-7kkard5p/${z}/${x}/${y}.png"], {
       attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
       sphericalMercator: true,
       wrapDateLine: true
