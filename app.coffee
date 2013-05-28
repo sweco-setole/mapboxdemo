@@ -64,10 +64,30 @@ $ ->
         v1: false
         v2: false
         v3: false
+        v4: false
+        v5: false
+        v6: false
+        v7: false
+        v8: false
+        v9: false
+        v10: false
+        v11: false
+        v12: false
+        v13: false
       markers.addFeatures [
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1445067,7475858), a
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1442443,7441135), a
         new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1433729,7571251), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1485630,7467496), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1485859,7466684), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1485959,7466484), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1487349,7466481), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1484559,7465398), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1485477,7465262), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1480355,7464991), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1479324,7464044), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1480470,7463705), a
+        new OpenLayers.Feature.Vector (new OpenLayers.Geometry.Point 1473782,7464653), a
       ]
       for f, i in markers.features
         f.fid = i+1
