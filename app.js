@@ -25,6 +25,7 @@
       units: 'm',
       controls: [new OpenLayers.Control.Navigation, new OpenLayers.Control.Attribution]
     });
+    window.map = map;
     styleContext = {
       getColor: function(feature) {
         var attr;
@@ -57,12 +58,12 @@
         if (attr.type === 'temp') {
           return void 0;
         }
-        attrDate = new Date(attr.date);
+        attrDate = $.datepicker.parseDate('yy-mm-dd', attr.date);
         attrDate.setHours(0, 0, 0);
         fromDate = $('#view-datepicker-from').datepicker().datepicker('getDate');
         fromDate.setHours(0, 0, 0);
         toDate = $('#view-datepicker-to').datepicker().datepicker('getDate');
-        toDate.setHours(0, 0, 0);
+        toDate.setHours(23, 59, 59);
         if (attrDate < fromDate || attrDate > toDate) {
           return 'none';
         } else if (attr.type === 'complaint') {
@@ -124,7 +125,7 @@
     reportedFeature = null;
     count = 0;
     $('#report-datepicker').datepicker();
-    $('#view-datepicker-from').datepicker().datepicker('setDate', new Date('2010-01-01'));
+    $('#view-datepicker-from').datepicker().datepicker('setDate', $.datepicker.parseDate('yy-mm-dd', '2010-01-01'));
     toDate = new Date();
     toDate.setHours(23, 59, 59);
     $('#view-datepicker-to').datepicker().datepicker('setDate', toDate);
