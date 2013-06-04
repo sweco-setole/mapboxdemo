@@ -26,7 +26,6 @@ $ ->
     units: 'm'
     controls: [new OpenLayers.Control.Navigation, new OpenLayers.Control.Attribution]
     
-  window.map = map
   styleContext =
     getColor: (feature) ->
       attr = feature.attributes
