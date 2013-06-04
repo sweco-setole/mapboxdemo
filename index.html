@@ -11,22 +11,63 @@
         <script src="http://openlayers.org/dev/OpenLayers.js"></script>
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <script src="ui.datepicker-sv.js"></script>
         <script src="app.js"></script>
+        <script src="data.js"></script>
     </head>
     <body>
-        <div style="z-index: 10000; position: absolute; top: 0px; left: 16px; width: 250px;">
+        <div style="z-index: 10000; position: absolute; top: 0px; left: 16px; width: 200px;">
           <p><button id="draw">Skapa felrapport</button></p>
         </div>
         
-        <div style="z-index: 10000; position: absolute; top: 0px; right: 16px; width: 250px;">
+        <div style="z-index: 10000; position: absolute; top: 0px; right: 16px; width: 200px;">
           <p><button id="login">Login</button></p>
         </div>
         
-        <div class="panel">
-          <h3 id="errortitle"></h3>
-          <p><input id="v1" type="checkbox">&nbsp;Smak</input><label for="v1"></label></p>
-          <p><input id="v2" type="checkbox">&nbsp;Lukt</input><label for="v2"></label></p>
-          <p><input id="v3" type="checkbox">&nbsp;Färg</input><label for="v3"></label></p>
+        <div class="right panel" id="viewpanel">
+          <h2 class="paneltitle">Visning</h2>
+          <div id="view-complaint" class="reporttype">
+            <h3 class="errortitle">Klagomål</h3>
+          	<p><input id="vc_all" type="checkbox" name="viewtype" value="complaint" checked="checked"/><label for="vc_all"><img class="cb-legend-img" src="img/complaints_all.png" />&nbsp;Visa alla</label></p>
+          	<hr />
+						<p><input id="vc1" name="complainttype" type="radio"></input><label for="vc1"><img src="img/color.png" />&nbsp;Färg</label></p>
+          	<p><input id="vc2" name="complainttype" type="radio"></input><label for="vc2"><img src="img/smell.png" />&nbsp;Lukt</label></p>
+          	<p><input id="vc3" name="complainttype" type="radio"></input><label for="vc3"><img src="img/taste.png" />&nbsp;Smak</label></p>
+          </div>
+          <div id="view-analysis" class="reporttype">
+            <h3 class="errortitle">Analysresultat</h3>
+            <p><input id="va_all" type="checkbox" name="viewtype"value="analysis" checked="checked"/><label for="va_all"><img class="cb-legend-img" src="img/analysis_all.png" />&nbsp;Visa alla</label></p>
+            <hr />
+						<p><input id="va1" name="view-analysistype" type="radio"></input><label for="va1"><img src="img/unfit.png" />&nbsp;Otjänligt</label></p>
+          	<p><input id="va2" name="view-analysistype" type="radio"></input><label for="va2"><img src="img/fit.png" />&nbsp;Tjänligt m anm</label></p>
+          </div>
+          <h3 class="errortitle">Rapporterings- tidpunkt</h3>
+          <div style="float:right;width:110px;">
+            <p><input type="text" class="ui-textfield, datepicker" id="view-datepicker-from" /></p>
+            <p><input type="text" class="ui-textfield, datepicker" id="view-datepicker-to" /></p>
+          </div>
+          <div style="float:left">
+            <p style="padding-top:4px">Från:</p>
+            <p style="padding-top:10px">Till:</p>
+          </div>
+        </div>
+        
+        <div class="left panel" id="reportpanel">
+          <h2 class="paneltitle">Rapportering</h2>
+          <div id="report-complaint" class="reporttype">
+          	<input type="radio" name="reporttype" value="complaint" checked="checked"/><h3 class="errortitle">Klagomål</h3>
+						<p><input id="c1" type="checkbox"></input><label for="c1">&nbsp;Färg</label></p>
+          	<p><input id="c2" type="checkbox"></input><label for="c2">&nbsp;Lukt</label></p>
+          	<p><input id="c3" type="checkbox"></input><label for="c3">&nbsp;Smak</label></p>
+          </div>
+          <div id="report-analysis" class="reporttype">
+          	<input type="radio" name="reporttype" value="analysis" /><h3 class="errortitle">Analysresultat</h3>
+						<p><input id="a1" disabled="disabled" name="analysistype" type="radio"></input><label class="disabled" for="a1">&nbsp;Otjänligt</label></p>
+          	<p><input id="a2" disabled="disabled" name="analysistype" type="radio"></input><label class="disabled" for="a2">&nbsp;Tjänligt m anm</label></p>
+          </div>
+          <h3 class="errortitle">Rapporterings- tidpunkt</h3>
+          <p>Datum: <input type="text" class="ui-textfield, datepicker" id="report-datepicker" /></p>
+          <p><button id="cancel">Avbryt</button><button id="save">Spara</button></p>
         </div>
         
         <div id="map" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>

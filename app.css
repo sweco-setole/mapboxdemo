@@ -1,31 +1,93 @@
 body {
   font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
-  font-size: 1.1em;
+  font-size: 0.8em;
 }
 .olControlAttribution {
     font-family: "Lucida Grande", Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
     bottom: 5px;
 }
+
+.olPopup {
+  border: 1px solid #ccc !important;
+  border-radius:4px;
+  box-shadow: 5px 5px 15px #888888;
+}
+
+.left{
+  left:16px;
+  top: 50px;
+}
+
+.right{
+  right:16px;
+  top:1em;
+}
+
+.popup {
+  font-weight: bold;
+  color: #1c94c4;
+}
+
+.result-label {
+  position:relative;
+  top:-1px;
+  padding-left:5px;
+}
+
 .panel {
   z-index: 10000;
   position: absolute;
-  top: 100px;
-  left: 16px;
-  width: 240px;
+  width: 166px;
   color: #1c94c4;
   background-color: white;
   border: 1px solid #ccc;
   font-weight: bold;
   border-radius: 4px;
   padding-left: 16px;
+  padding-right: 16px;
   display: none;
+}
+
+.reporttype {
+	border: 1px solid;
+	border-radius: 10px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
+}
+
+.errortitle {
+	display:inline;
+}
+
+.datepicker {
+	width:92px;
+	font:inherit;
+	position:relative;
+	right:0px;
+}
+
+.cb-legend-img{
+  padding-left:2px;
+}
+
+.disabled {
+	opacity:0.5;
 }
 
 #draw {
   display: none;
-  width: 250px;
+  width: 200px;
 }
 
 #login {
-  width: 250px;
+  width: 200px;
+}
+
+#save {
+	width:75px;
+}
+
+#cancel {
+  width:88px;
 }
