@@ -152,7 +152,44 @@
           a2: true
         }
       }
+    }, {
+      x: 1480000,
+      y: 7527337,
+      attr: {
+        date: '2012-06-06',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1455234,
+      y: 7534064,
+      attr: {
+        date: '2012-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1433220,
+      y: 7534064,
+      attr: {
+        date: '2012-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
     }
+    
   ];
 
 }).call(this);
