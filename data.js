@@ -3,8 +3,8 @@
 
   window.svData = [
     {
-      x: 1445067,
-      y: 7475858,
+      x: 1413958,
+      y: 7564620,
       attr: {
         date: '2012-06-04',
         type: 'complaint',
@@ -15,8 +15,8 @@
         }
       }
     }, {
-      x: 1442443,
-      y: 7441135,
+      x: 1444991,
+      y: 7480845,
       attr: {
         date: '2012-06-04',
         type: 'analysis',
@@ -26,8 +26,8 @@
         }
       }
     }, {
-      x: 1433729,
-      y: 7571251,
+      x: 1451565,
+      y: 7476106,
       attr: {
         date: '2012-06-04',
         type: 'complaint',
@@ -38,8 +38,8 @@
         }
       }
     }, {
-      x: 1485630,
-      y: 7487496,
+      x: 1512906,
+      y: 7454168,
       attr: {
         date: '2012-06-04',
         type: 'analysis',
@@ -49,8 +49,8 @@
         }
       }
     }, {
-      x: 1485859,
-      y: 7486684,
+      x: 1475471,
+      y: 7461124,
       attr: {
         date: '2012-06-04',
         type: 'complaint',
@@ -61,8 +61,8 @@
         }
       }
     }, {
-      x: 1485959,
-      y: 7486484,
+      x: 1472566,
+      y: 7461487,
       attr: {
         date: '2012-06-04',
         type: 'analysis',
@@ -72,91 +72,82 @@
         }
       }
     }, {
-      x: 1487349,
-      y: 7486481,
+      x: 1457298,
+      y: 7517840,
+      attr: {
+        date: '2012-06-04',
+        type: 'analysis',
+        data: {
+          a1: false,
+          a2: true
+        }
+      }
+    }, {
+      x: 1441399,
+      y: 7440065,
+      attr: {
+        date: '2012-06-04',
+        type: 'analysis',
+        data: {
+          a1: true,
+          a2: false
+        }
+      }
+    }, {
+      x: 1440443,
+      y: 7475800,
+      attr: {
+        date: '2012-06-04',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1501669,
+      y: 7454474,
+      attr: {
+        date: '2012-06-04',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: false,
+          c3: true
+        }
+      }
+    }, {
+      x: 1433449,
+      y: 7607348,
       attr: {
         date: '2012-06-04',
         type: 'complaint',
         data: {
           c1: true,
           c2: false,
-          c3: true
-        }
-      }
-    }, {
-      x: 1484559,
-      y: 7485398,
-      attr: {
-        date: '2012-06-04',
-        type: 'analysis',
-        data: {
-          a1: true,
-          a2: false
-        }
-      }
-    }, {
-      x: 1485477,
-      y: 7485262,
-      attr: {
-        date: '2012-06-04',
-        type: 'complaint',
-        data: {
-          c1: false,
-          c2: true,
           c3: false
         }
       }
-    }, {
-      x: 1480355,
-      y: 7484991,
+    },
+    //Esloev
+    {
+      x: 1484509,
+      y: 7527261,
       attr: {
-        date: '2012-06-04',
+        date: '2013-06-06',
         type: 'complaint',
         data: {
           c1: false,
-          c2: false,
+          c2: true,
           c3: true
-        }
-      }
-    }, {
-      x: 1479324,
-      y: 7484044,
-      attr: {
-        date: '2012-06-04',
-        type: 'complaint',
-        data: {
-          c1: true,
-          c2: false,
-          c3: false
-        }
-      }
-    }, {
-      x: 1480470,
-      y: 7483705,
-      attr: {
-        date: '2012-06-04',
-        type: 'analysis',
-        data: {
-          a1: true,
-          a2: false
-        }
-      }
-    }, {
-      x: 1473782,
-      y: 7484653,
-      attr: {
-        date: '2012-06-04',
-        type: 'analysis',
-        data: {
-          a1: false,
-          a2: true
         }
       }
     }, {
       x: 1480000,
       y: 7527337,
       attr: {
-        date: '2012-06-06',
+        date: '2013-06-06',
         type: 'complaint',
         data: {
           c1: false,
@@ -165,10 +156,10 @@
         }
       }
     }, {
-      x: 1455234,
-      y: 7534064,
+      x: 1475795,
+      y: 7530166,
       attr: {
-        date: '2012-06-07',
+        date: '2013-06-06',
         type: 'complaint',
         data: {
           c1: false,
@@ -177,10 +168,157 @@
         }
       }
     }, {
+      x: 1474496,
+      y: 7530701,
+      attr: {
+        date: '2013-06-06',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1467922,
+      y: 7530013,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: true,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1464483,
+      y: 7531159,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1479751,
+      y: 7523630,
+      attr: {
+        date: '2013-06-08',
+        type: 'analysis',
+        data: {
+          a1: false,
+          a2: true
+        }
+      }
+    },
+    //Svaloev
+    {
+      x: 1460126,
+      y: 7532764,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: false,
+          c3: true
+        }
+      }
+    }, {
+      x: 1456954,
+      y: 7532382,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1458635,
+      y: 7539950,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1459056,
+      y: 7541669,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1446979,
+      y: 7534218,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: false
+        }
+      }
+    }, {
+      x: 1459744,
+      y: 7540180,
+      attr: {
+        date: '2013-06-07',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1446329,
+      y: 7534218,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1457603,
+      y: 7541250,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: false,
+          c3: true
+        }
+      }
+    },
+    //Landskrona
+    {
       x: 1433220,
       y: 7534064,
       attr: {
-        date: '2012-06-08',
+        date: '2013-06-08',
         type: 'complaint',
         data: {
           c1: false,
@@ -188,8 +326,102 @@
           c3: true
         }
       }
+    }, {
+      x: 1442660,
+      y: 7535937,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1440558,
+      y: 7535097,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1431653,
+      y: 7532460,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1429016,
+      y: 7534829,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1437615,
+      y: 7528523,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1429054,
+      y: 7533071,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1427831,
+      y: 7531886,
+      attr: {
+        date: '2013-06-08',
+        type: 'complaint',
+        data: {
+          c1: false,
+          c2: true,
+          c3: true
+        }
+      }
+    }, {
+      x: 1430163,
+      y: 7531370,
+      attr: {
+        date: '2013-06-09',
+        type: 'analysis',
+        data: {
+          a1: false,
+          a2: true
+        }
+      }
     }
-    
   ];
 
 }).call(this);
